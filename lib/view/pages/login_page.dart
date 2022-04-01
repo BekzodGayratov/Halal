@@ -72,13 +72,15 @@ class LoginPage extends StatelessWidget {
                           overflow: TextOverflow.visible,
                         ),
                       ),
-                    
-                   
                       Padding(
-                        padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.27,bottom: MediaQuery.of(context).size.height *0.02),
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.27,
+                            bottom: MediaQuery.of(context).size.height * 0.02),
                         child: MyPrimaryButton(
                           child: "Ro'yhatdan o'tish",
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(context, '/signUp');
+                          },
                           color: const Color(0xffEFEFEF),
                           textColor: Colors.black,
                         ),
