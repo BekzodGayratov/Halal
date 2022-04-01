@@ -110,7 +110,7 @@ class _BoardingPageState extends State<BoardingPage>
                           ),
                         ),
                         MyPrimaryButton(
-                            child: const Text("Keyingisi"),
+                            child:"Ro'yhatdan o'tish",
                             onPressed: () {
                               if (_controller!.previousIndex != 1) {
                                 _controller!.index += 1;
@@ -121,7 +121,7 @@ class _BoardingPageState extends State<BoardingPage>
                                 Navigator.pushReplacementNamed(
                                     context, '/login');
                               }
-                            })
+                            },color: Colors.red,textColor: Colors.red,)
                       ],
                     ),
                   ),

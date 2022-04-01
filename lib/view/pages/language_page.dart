@@ -41,7 +41,7 @@ class LanguagePage extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 26.0,
                         fontWeight: FontWeight.w600,
-                        color: MyColors.primaryTextColor),
+                        color: MyColors.primaryTextColorLight),
                   ),
                   Text(
                     "Dasturni qaysi tilda ishlatishni hohlaysiz?",
@@ -68,10 +68,11 @@ class LanguagePage extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.08,
                   ),
                   MyPrimaryButton(
-                      child: const Text("Keyingisi"),
+                      child:"Ro'yhatdan o'tish",
                       onPressed: () {
                         Navigator.pushReplacementNamed(context, '/boarding');
-                      })
+                      
+                      },color: Colors.red,textColor: Colors.red,)
                 ],
               ),
             ),

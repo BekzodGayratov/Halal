@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:halal/constants/const_colors.dart';
 
 class MyPrimaryButton extends StatelessWidget {
-  final Widget child;
+  final String child;
   final VoidCallback onPressed;
+  final Color color;
+  final Color textColor;
   const MyPrimaryButton(
-      {Key? key, required this.child, required this.onPressed})
+      {Key? key,
+      required this.child,
+      required this.onPressed,
+      required this.color,
+      required this.textColor})
       : super(key: key);
 
   @override
@@ -14,11 +20,9 @@ class MyPrimaryButton extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.075,
       width: double.infinity,
       child: ElevatedButton(
-        child: child,
+        child: Text(child,style: TextStyle(color: textColor),),
         onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          primary: MyColors.myPrimaryButtonColor
-        ),
+        style: ElevatedButton.styleFrom(primary: color),
       ),
     );
   }

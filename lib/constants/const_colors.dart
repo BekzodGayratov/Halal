@@ -1,8 +1,8 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class MyColors {
   //Text Colors
-  static Color primaryTextColor = const Color(0xff0E130F);
+  static Color primaryTextColorLight = Colors.white;
   static Color secondaryTextColor = const Color(0xff565A57);
 
   // Buttons
