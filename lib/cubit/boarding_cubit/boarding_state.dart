@@ -7,6 +7,6 @@ class InitialState extends BoardingState {
   InitialState();
 }
 
-class ChangeState extends BoardingState {
-  ChangeState();
+class BoardingChangeState extends BoardingState {
+  BoardingChangeState();
 }
