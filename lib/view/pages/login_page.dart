@@ -72,16 +72,19 @@ class LoginPage extends StatelessWidget {
                           overflow: TextOverflow.visible,
                         ),
                       ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.09,
-                      ),
-                      MyPrimaryButton(
-                        child: "Ro'yhatdan o'tish",
-                        onPressed: () {},
-                        color: Colors.red,
-                        textColor: Colors.black,
+                    
+                   
+                      Padding(
+                        padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.27,bottom: MediaQuery.of(context).size.height *0.02),
+                        child: MyPrimaryButton(
+                          child: "Ro'yhatdan o'tish",
+                          onPressed: () {},
+                          color: const Color(0xffEFEFEF),
+                          textColor: Colors.black,
+                        ),
                       ),
                       TextButton(
+                        style: TextButton.styleFrom(primary: Colors.white),
                         child: const Text("Akkauntga kirish"),
                         onPressed: () {},
                       ),

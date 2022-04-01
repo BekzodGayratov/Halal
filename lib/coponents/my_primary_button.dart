@@ -20,7 +20,7 @@ class MyPrimaryButton extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.075,
       width: double.infinity,
       child: ElevatedButton(
-        child: Text(child,style: TextStyle(color: textColor),),
+        child: Text(child,style: TextStyle(color: textColor,fontWeight: FontWeight.w600),),
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(primary: color),
       ),
