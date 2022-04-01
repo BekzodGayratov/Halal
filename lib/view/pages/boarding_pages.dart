@@ -55,11 +55,12 @@ class _BoardingPageState extends State<BoardingPage>
                 Expanded(
                   flex: 5,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width *0.02),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: MediaQuery.of(context).size.width * 0.02),
                     child: Column(
                       children: [
                         SizedBox(
-                          height: MediaQuery.of(context).size.height *0.04,
+                          height: MediaQuery.of(context).size.height * 0.04,
                         ),
                         SizedBox(
                           width: double.infinity,
@@ -72,7 +73,9 @@ class _BoardingPageState extends State<BoardingPage>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height *0.08),
+                          padding: EdgeInsets.symmetric(
+                              vertical:
+                                  MediaQuery.of(context).size.height * 0.08),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -81,7 +84,10 @@ class _BoardingPageState extends State<BoardingPage>
                                   .read<BoardingCubit>()
                                   .changeCurrentItemIndex(index);
                               return Container(
-                                margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width *0.01),
+                                margin: EdgeInsets.symmetric(
+                                    horizontal:
+                                        MediaQuery.of(context).size.width *
+                                            0.01),
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     width: 1.5,
@@ -106,13 +112,14 @@ class _BoardingPageState extends State<BoardingPage>
                         MyPrimaryButton(
                             child: const Text("Keyingisi"),
                             onPressed: () {
-                              if (_controller!.previousIndex !=1) {
+                              if (_controller!.previousIndex != 1) {
                                 _controller!.index += 1;
                                 context
                                     .read<BoardingCubit>()
                                     .changeBoarding(_controller!.index);
                               } else {
-                                print("Hello");
+                                Navigator.pushReplacementNamed(
+                                    context, '/login');
                               }
                             })
                       ],

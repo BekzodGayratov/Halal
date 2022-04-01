@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:halal/view/pages/boarding_pages.dart';
 import 'package:halal/view/pages/language_page.dart';
+import 'package:halal/view/pages/login_page.dart';
 import 'package:halal/view/screens/home_screen.dart';
 import 'package:halal/view/screens/splash_screen.dart';
 
@@ -15,6 +16,8 @@ class MyRouter {
         return MaterialPageRoute(builder: (context) => LanguagePage());
       case '/boarding':
         return MaterialPageRoute(builder: (context) => BoardingPage());
+      case '/login':
+        return MaterialPageRoute(builder: (context) => LoginPage());
     }
   }
 }
