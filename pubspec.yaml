@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^1.0.3
   bloc: ^8.0.3
   flutter_bloc: ^8.0.1
+  top_modal_sheet: ^1.0.0+1
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +66,7 @@ flutter:
     - assets/
     - assets/boarding/
     - assets/login/
+    - assets/home_icons/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

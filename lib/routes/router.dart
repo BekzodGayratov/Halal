@@ -4,7 +4,7 @@ import 'package:halal/view/pages/language_page.dart';
 import 'package:halal/view/pages/login_page.dart';
 import 'package:halal/view/pages/sign_up_page.dart';
 import 'package:halal/view/pages/verify_otp_page.dart';
-import 'package:halal/view/screens/home_screen.dart';
+import 'package:halal/view/screens/current_screen.dart';
 import 'package:halal/view/screens/splash_screen.dart';
 
 class MyRouter {
@@ -13,7 +13,7 @@ class MyRouter {
       case '/splash':
         return MaterialPageRoute(builder: (context) => SplashScreen());
       case '/':
-        return MaterialPageRoute(builder: (context) => HomeScreen());
+        return MaterialPageRoute(builder: (context) => CurrentScreen());
       case '/language':
         return MaterialPageRoute(builder: (context) => LanguagePage());
       case '/boarding':
