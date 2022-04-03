@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:halal/view/pages/boarding_pages.dart';
+import 'package:halal/view/pages/buy_animal_page.dart';
 import 'package:halal/view/pages/language_page.dart';
 import 'package:halal/view/pages/login_page.dart';
 import 'package:halal/view/pages/sign_up_page.dart';
 import 'package:halal/view/pages/verify_otp_page.dart';
 import 'package:halal/view/screens/current_screen.dart';
+import 'package:halal/view/screens/home_screen.dart';
 import 'package:halal/view/screens/splash_screen.dart';
 
 class MyRouter {
@@ -25,6 +27,10 @@ class MyRouter {
       case '/verify':
         return MaterialPageRoute(
             builder: (context) => VerifyPage(phoneNumber: "+998916952632"));
+      case '/home':
+        return MaterialPageRoute(builder: (context) => HomeScreen());
+      case '/buyAnimal':
+        return MaterialPageRoute(builder: (context) => BuyAnimalPage());
     }
   }
 }

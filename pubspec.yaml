@@ -67,6 +67,7 @@ flutter:
     - assets/boarding/
     - assets/login/
     - assets/home_icons/
+    - assets/animals/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
