@@ -17,16 +17,9 @@ class InfoPage extends StatelessWidget {
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              leadingWidth: MediaQuery.of(context).size.width * 0.25,
-              leading: MyBackButtton(
-                  color: Colors.white,
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              expandedHeight: MediaQuery.of(context).size.height * 0.4,
-              title: Text(title),
-              centerTitle: true,
+            MySliverAppBar(
+              title: "Denov oti (N 254)",
+              imgUrl: "assets/animals/horse.png",
               actions: [
                 IconButton(
                   icon: const Icon(Icons.video_call_outlined),
@@ -35,12 +28,6 @@ class InfoPage extends StatelessWidget {
                   },
                 ),
               ],
-              flexibleSpace: FlexibleSpaceBar(
-                background: Image.asset(
-                  "assets/animals/horse.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
             ),
             SliverList(
               delegate: SliverChildListDelegate(
@@ -226,6 +213,38 @@ class InfoPage extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class MySliverAppBar extends StatelessWidget {
+  const MySliverAppBar(
+      {Key? key, required this.title, required this.imgUrl, this.actions})
+      : super(key: key);
+
+  final String title;
+  final String imgUrl;
+  final List<Widget>? actions;
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverAppBar(
+      leadingWidth: MediaQuery.of(context).size.width * 0.25,
+      leading: MyBackButtton(
+          color: Colors.white,
+          onPressed: () {
+            Navigator.pop(context);
+          }),
+      expandedHeight: MediaQuery.of(context).size.height * 0.4,
+      title: Text(title),
+      centerTitle: true,
+      actions: actions ?? [],
+      flexibleSpace: FlexibleSpaceBar(
+        background: Image.asset(
+          imgUrl,
+          fit: BoxFit.cover,
         ),
       ),
     );
