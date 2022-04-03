@@ -3,6 +3,7 @@ import 'package:halal/view/pages/boarding_pages.dart';
 import 'package:halal/view/pages/buy_animal_page.dart';
 import 'package:halal/view/pages/info_page.dart';
 import 'package:halal/view/pages/language_page.dart';
+import 'package:halal/view/pages/live_page.dart';
 import 'package:halal/view/pages/login_page.dart';
 import 'package:halal/view/pages/sign_up_page.dart';
 import 'package:halal/view/pages/verify_otp_page.dart';
@@ -34,7 +35,10 @@ class MyRouter {
       case '/buyAnimal':
         return MaterialPageRoute(builder: (context) => BuyAnimalPage());
       case '/info':
-        return MaterialPageRoute(builder: (context) => InfoPage(title: args as String));
+        return MaterialPageRoute(
+            builder: (context) => InfoPage(title: args as String));
+      case '/live':
+        return MaterialPageRoute(builder: (context) => LivePage());
     }
   }
 }

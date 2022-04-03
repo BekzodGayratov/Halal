@@ -30,7 +30,9 @@ class InfoPage extends StatelessWidget {
               actions: [
                 IconButton(
                   icon: const Icon(Icons.video_call_outlined),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/live');
+                  },
                 ),
               ],
               flexibleSpace: FlexibleSpaceBar(
