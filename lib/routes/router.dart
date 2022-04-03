@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:halal/view/pages/boarding_pages.dart';
 import 'package:halal/view/pages/buy_animal_page.dart';
+import 'package:halal/view/pages/info_page.dart';
 import 'package:halal/view/pages/language_page.dart';
 import 'package:halal/view/pages/login_page.dart';
 import 'package:halal/view/pages/sign_up_page.dart';
@@ -11,6 +12,7 @@ import 'package:halal/view/screens/splash_screen.dart';
 
 class MyRouter {
   Route? onGenerate(RouteSettings settings) {
+    var args = settings.arguments;
     switch (settings.name) {
       case '/splash':
         return MaterialPageRoute(builder: (context) => SplashScreen());
@@ -31,6 +33,8 @@ class MyRouter {
         return MaterialPageRoute(builder: (context) => HomeScreen());
       case '/buyAnimal':
         return MaterialPageRoute(builder: (context) => BuyAnimalPage());
+      case '/info':
+        return MaterialPageRoute(builder: (context) => InfoPage(title: args as String));
     }
   }
 }

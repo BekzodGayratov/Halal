@@ -3,26 +3,24 @@ import 'package:flutter/widgets.dart';
 
 class MyBackButtton extends StatelessWidget {
   final VoidCallback onPressed;
-  const MyBackButtton({
-    Key? key,required this.onPressed
-  }) : super(key: key);
+  final Color? color;
+  const MyBackButtton({Key? key, required this.onPressed,this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: Row(
-        children: const [
-          Icon(
-            Icons.arrow_back_ios,
-            color: Colors.blue,
-          ),
-          Text(
-            "Ortga",
-            style: TextStyle(fontSize: 17.0, color: Colors.blue),
-          )
-        ],
-      ),
-      onPressed: onPressed
-    );
+        icon: Row(
+          children: [
+            Icon(
+              Icons.arrow_back_ios,
+              color:color?? Colors.blue,
+            ),
+            Text(
+              "Ortga",
+              style: TextStyle(fontSize: 17.0, color: color?? Colors.blue),
+            )
+          ],
+        ),
+        onPressed: onPressed);
   }
 }
